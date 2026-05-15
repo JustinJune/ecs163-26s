@@ -85,7 +85,7 @@ d3.csv("mxmh_survey_results.csv").then(rawData => {
 
     //Create Label arc so that I can control, label placements within the circle
     const labelArc = d3.arc()
-        .innerRadius(radius * 0.93) // Position text at 70% of the radius
+        .innerRadius(radius * 0.93) 
         .outerRadius(radius * 0.93);
 
     // calculate the center point of slice for text placements
@@ -104,8 +104,8 @@ d3.csv("mxmh_survey_results.csv").then(rawData => {
         .style("text-anchor", "middle")
         .style("font-weight", "bold")
         .style("font-size", "13px")
-        .style("fill", "black") // White text usually looks better on colors
-        .style("pointer-events", "none") // Prevents text from blocking mouse events
+        .style("fill", "black") 
+        .style("pointer-events", "none") 
         .style("pointer-events", "none") 
         .text((d, i) => i + 1);
     
@@ -188,7 +188,7 @@ d3.csv("mxmh_survey_results.csv").then(rawData => {
     // Chose colors based on positive/negative connotations
     const effectColors = d3.scaleOrdinal()
         .domain(effectCategories)
-            .range(["#0fb807", "#c6d00e", "#c01818"]); // IndianRed, Gold, DarkBlue
+            .range(["#0fb807", "#c6d00e", "#c01818"]);
 
     // Create chart container
     const gBar = svg.append("g")
