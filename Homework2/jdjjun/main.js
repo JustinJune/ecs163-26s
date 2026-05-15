@@ -229,7 +229,7 @@ d3.csv("mxmh_survey_results.csv").then(rawData => {
     const barlegend = gBar.append("g")
         .attr("transform", `translate(${distrWidth - 60}, -10)`);
 
-    // Add Title
+    // Add Title to the Bar chart
     svg.append("text")
         .attr("x", distrLeft + 10)
         .attr("y", distrTop + 20)
